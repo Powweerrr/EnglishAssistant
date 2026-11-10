@@ -1,0 +1,39 @@
+# Python
+__pycache/
+*.py[cod]
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Testing and linting
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local database and user data
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+data/history.json
+data/dictionary.json
+data/settings.json
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
