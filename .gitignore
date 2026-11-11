@@ -1,0 +1,8 @@
+.venv/
+.build-venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/EnglishAssistant.exe
+*.spec.bak

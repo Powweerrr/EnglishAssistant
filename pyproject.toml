@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "english-assistant"
+version = "1.2.0"
+description = "Desktop English learning assistant with OCR, translation, dictionary and study tools"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "PySide6>=6.8,<7",
+    "Pillow>=11.0",
+    "rapidocr>=3.10.0",
+    "onnxruntime>=1.20",
+    "pynput>=1.7.7",
+    "mss>=10.0",
+    "pywinauto>=0.6.9; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.10"]
+test = ["pytest>=8.0", "ruff>=0.9"]
+
+[project.scripts]
+english-assistant = "english_assistant.main:main"
+english-assistant-dictionary = "english_assistant.dictionary.install:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

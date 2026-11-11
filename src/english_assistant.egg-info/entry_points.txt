@@ -1,0 +1,3 @@
+[console_scripts]
+english-assistant = english_assistant.main:main
+english-assistant-dictionary = english_assistant.dictionary.install:main
